@@ -14,23 +14,29 @@
 	<div class="section section-footer">
 		<div class="container">
 			<div class="row">
-
-				<?php if ( is_active_sidebar( 'footer-widget' ) ) : ?>
-
-						<div class="col-xs-6 col-sm-4 col-md-3 col-md-offset-2 box">		
-							<?php dynamic_sidebar( 'footer-widget-1' ); ?>					
-						</div>	
-
-						<div class="col-xs-6 col-sm-4 col-md-3 box">
-							<?php dynamic_sidebar( 'footer-widget-2' ); ?>
-						</div>
-
-						<div class="col-xs-6 col-sm-4 col-md-3 box">
-							<?php dynamic_sidebar( 'footer-widget-3' ); ?>
-						</div>	
-
-				<?php endif; ?>		
-
+				<div class="col-xs-6 col-sm-4 col-md-3 col-md-offset-2 box">	
+					<!-- 
+					<div class="widget">
+						<h3 class="widget-title">Company</h3>	
+						<ul class="">
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Press</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Help</a></li>
+							<li><a href="#">Policies</a></li>
+							<li><a href="#">Terms and Privacy</a></li>
+						</ul>						
+					</div>
+					 -->
+					<?php dynamic_sidebar( 'footer-widget-1' ); ?>		
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 box">
+					<?php dynamic_sidebar( 'footer-widget-2' ); ?>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 box">
+					<?php dynamic_sidebar( 'footer-widget-3' ); ?>
+				</div>	
 			</div>
 		</div>
 	</div>
@@ -38,13 +44,10 @@
 	<!-- Section Social-->
 	<div class="section section-social">
 		<div class="container">
-			<div class="row">
-				<h2 class="section-title">Join Us</h2>
-			</div>
+			<div class="row"><h2 class="section-title">Join Us</h2></div>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="div social-lists">
-					
 						<a href="" class="iconn btn-facebook"><i class="fa fa-facebook"></i></a>
 						<a href="" class="iconn btn-twitter"><i class="fa fa-twitter"></i></a>
 						<a href="" class="iconn btn-green"><i class="fa fa-google"></i></a>					
@@ -57,6 +60,8 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Copyright -->
 	<div class="section footer-copyright">
 		<small>© 2015 Indulge Now | <a href="#">Privacy Policy</a> | All Rights Reserved </small>
 	</div>

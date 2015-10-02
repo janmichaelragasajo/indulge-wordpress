@@ -7,26 +7,26 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header( 'secondheader' ); ?>
+get_header(); ?>
 
-<section class="inner-page">
-	<div id="primary" class="content-area">
-
-		<main id="main" class="site-main" role="main">
-			<section class="error-404 not-found parent-wrap">
-				<div class="child-wrap">
-
-					<span><i class="icon-caution"></i></span>
-					<h4 class="section-title">Page not found</h4>
-					<p>The page you are loading for either doesn't exist or is not here anymore.</p>	
-					<p>Return <a href="<?php bloginfo( 'url' ) ?>/">home</a></p>				
-				</div>
-				
-			</section><!-- .error-404 -->
-		</main><!-- .site-main -->
-
-	</div><!-- .content-area -->	
-</section>
+<div class="section section--innerpage">
+	<div class="container">
+		<div class="row">
+			<div id="primary" class="content-area col-md-12">
+				<main id="main" class="site-main" role="main">
+					<section class="error-404 not-found ">
+						<div class="child-wrap">
+							<span><i class="icon-caution"></i></span>
+							<h1 class="section-title">Page not found</h1>
+							<p>We are sorry but this page doesn't exist or has been removed.</p>	
+							<a href="<?php echo bloginfo( 'home' ); ?>/" class="btn btn-green">Home</a>			
+						</div>
+					</section><!-- .error-404 -->
+				</main><!-- .site-main -->
+			</div><!-- .content-area -->
+		</div>
+	</div>	
+</div>
 
 <?php get_footer(); ?>
 

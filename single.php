@@ -11,47 +11,45 @@ get_header(); ?>
 
 
 
-<div class="section">
+<div class="section section--innerpage">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-12">
-				<section class="inner-page">
-					<div id="primary" class="content-area">
-						<main id="main" class="site-main" role="main">
+			<div id="primary" class="content-area">
+				<div class="col-md-8 col-md-offset-2">
+					<main id="main" class="site-main" role="main">
 
-						<?php
-						// Start the loop.
-						while ( have_posts() ) : the_post();
+					<?php
+					// Start the loop.
+					while ( have_posts() ) : the_post();
 
-							/*
-							 * Include the post format-specific template for the content. If you want to
-							 * use this in a child theme, then include a file called called content-___.php
-							 * (where ___ is the post format) and that will be used instead.
-							 */
-							get_template_part( 'content', get_post_format() );
+						/*
+						 * Include the post format-specific template for the content. If you want to
+						 * use this in a child theme, then include a file called called content-___.php
+						 * (where ___ is the post format) and that will be used instead.
+						 */
+						get_template_part( 'content', get_post_format() );
 
+						// Previous/next post navigation.
+						the_post_navigation( array(
+							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
+								'<span class="post-title">%title</span>',
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
+								'<span class="post-title">%title</span>',
+						) );
 
-							// Previous/next post navigation.
-							the_post_navigation( array(
-								'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-									'<span class="post-title">%title</span>',
-								'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-									'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-									'<span class="post-title">%title</span>',
-							) );
+					// End the loop.
+					endwhile;
+					?>
 
-						// End the loop.
-						endwhile;
-						?>
+					</main><!-- .site-main -->					
+				</div>
 
-						</main><!-- .site-main -->
-					</div><!-- .content-area -->
-				</section>				
-			</div>
-		</div>
-	</div>	
-</div>
+			</div><!-- .content-area -->
+		</div> 
+	</div>
+</div>	
 
 
 <?php get_footer(); ?>

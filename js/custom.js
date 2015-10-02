@@ -1,39 +1,45 @@
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
+$(document).ready(function() {
+	// play video
+	function playVideo() {
+		$('#bgvid2').trigger('pause');
+		var $vidId = $('#bgvid2');
 
-    if (scroll >= 40) {
-        $(".navbar").addClass("navbar-green");
+		$("#playIndulgenceVid").click( function() {
+			if ( $($vidId).get(0).paused ) {
+				$vidId.trigger('play');
+			} else {
+				$vidId.addClass("stopfade");			
+				$vidId.trigger('pause');
+			}
+		});
+	}
 
-    } else {
-        $(".navbar").removeClass("navbar-green");
-    }
+	// Clone content in #navbar into #navbarbar
+	(function cloneNavBar() {
+		var textContent = $(".nav.navbar-nav").clone();
 
+		$( textContent ).appendTo("#navbarbar");	
+		$("#navbar").removeClass("hidden-xs");
+		$("#navbar-menu-wrapper").addClass("hidden-sm hidden-md hidden-lg");
+		$("#navbarbar li.dropdown").remove();
+	})();
+
+	$(".navbar-toggle").click( function() {
+        $("#navbar-menu-wrapper").toggleClass("navbar-green zindex-999");
+	});
 });
 
+function scrollToTop() {
+	$(window).scroll(function() {    
+	    var scroll = $(window).scrollTop();
 
-var vid = document.getElementById("bgvid");
-var pauseButton = document.querySelector("#polina button");
+	    if (scroll >= 40) {
 
-function vidFade() {
-	vid.classList.add("stopfade");
+	        $(".navbar").addClass("navbar-green");
+
+	    } else {
+	        $(".navbar").removeClass("navbar-green");
+	    }
+	});		
 }
-
-vid.addEventListener('ended', function() {
-	// only functional if "loop" is removed 
-	vid.pause();
-	// to capture IE10
-	vidFade();
-}); 
-
-
-pauseButton.addEventListener("click", function() {
-	vid.classList.toggle("stopfade");
-	if (vid.paused) {
-		vid.play();
-		pauseButton.innerHTML = "Pause";
-	} else {
-		vid.pause();
-		pauseButton.innerHTML = "Paused";
-	}
-})
 

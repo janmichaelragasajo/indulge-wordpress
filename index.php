@@ -16,5 +16,41 @@
 
 get_header(); ?>
 
-<h2>This is the content</h2>
+
+<div class="section section--innerpage">
+	<div class="container">
+		<div class="row">
+			<div id="primary" class="content-area">
+
+	            <?php $the_query = new WP_Query( 'posts_per_page=6' ); ?>
+	            <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>  
+
+					<div class="col-md-6">					
+						<main id="main" class="site-main" role="main">
+	                            <!-- blog item -->
+	                            <article class="post-item">
+	                            	<div class="post-thumbnail">
+	                                	<?php the_post_thumbnail( 'thumbnail' ); ?>
+	                                	<img class="img-responsive" src="http://placehold.it/750x430" alt="">                              		
+	                            	</div>
+	                                <h2 class="post-title"> <?php the_title(); ?></h2>
+	                                <p class="post-meta">
+		                                <span><i class="fa fa-user"></i> <?php the_author(); ?></span>	                                
+		                                <span><i class="fa fa-clock-o"></i> <?php the_date(); ?></span>
+	                                </p>
+	                                <p class="post-excerpt">
+	                                    <?php echo(get_the_excerpt()); ?>                                  	
+	                                </p>
+	                                <a href="<?php the_permalink() ?>" class="btn btn-green btn-sm">Read more</a>
+	                            </article>            
+						</main><!-- .site-main -->
+					</div>	
+
+	            <?php endwhile; wp_reset_postdata(); ?>
+
+			</div><!-- .content-area -->
+		</div> 
+	</div>
+</div>	
+
 <?php get_footer(); ?>
