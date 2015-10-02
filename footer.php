@@ -14,8 +14,8 @@
 	<div class="section section-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-3 col-md-offset-2 box">	
-					<!-- 
+				<div class="col-sm-4 col-md-3 col-md-offset-2 box a-style-sm">	
+					<!-- Static Widget Markup
 					<div class="widget">
 						<h3 class="widget-title">Company</h3>	
 						<ul class="">
@@ -31,10 +31,10 @@
 					 -->
 					<?php dynamic_sidebar( 'footer-widget-1' ); ?>		
 				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 box">
+				<div class="col-sm-4 col-md-3 box a-style-sm">
 					<?php dynamic_sidebar( 'footer-widget-2' ); ?>
 				</div>
-				<div class="col-xs-6 col-sm-4 col-md-3 box">
+				<div class="col-sm-4 col-md-3 box a-style-sm">
 					<?php dynamic_sidebar( 'footer-widget-3' ); ?>
 				</div>	
 			</div>
@@ -64,8 +64,7 @@
 	<!-- Copyright -->
 	<div class="section footer-copyright">
 		<small>© 2015 Indulge Now | <a href="#">Privacy Policy</a> | All Rights Reserved </small>
-	</div>
-	
+	</div>	
 <!-- 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-2.1.1.min.js"></script>
  -->

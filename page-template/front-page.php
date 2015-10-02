@@ -126,6 +126,15 @@ get_header(); ?>
 				<h2 class="section-title">Leave Your Stress with Blissful Abandon. <br>Indulge Now.</h2>
 			</div>
 			<div class="row">	
+				<div class="col-md-6 box box-giver">
+					<div class="inner vertical-parent ">
+						<div class="vertical-child">
+							<h2 class="box-title ">
+								<a href="#"> Find Available <br>Indulgence Giver</a>
+							</h2>
+						</div>					
+					</div>
+				</div>			
 				<div class="col-md-6 box box-post-job">
 					<div class="inner vertical-parent">
 						<div class="vertical-child">
@@ -133,15 +142,6 @@ get_header(); ?>
 							<p class="box-subtitle">Book Your Indulgence Givers for Your Event</p>
 							<a href="" class="btn btn-primary btn-green">Sign Up</a>			
 							<a href="" class="btn btn-lightblue">Log in</a>					
-						</div>					
-					</div>
-				</div>
-				<div class="col-md-6 box box-giver">
-					<div class="inner vertical-parent ">
-						<div class="vertical-child">
-							<h2 class="box-title ">
-								<a href="#"> Find Available <br>Indulgence Giver</a>
-							</h2>
 						</div>					
 					</div>
 				</div>

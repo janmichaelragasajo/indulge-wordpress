@@ -13,6 +13,21 @@ h5, .h5 {
 	font-family: 'Circular-Book';
 }
 
+.section .section-title,
+h1, .h1,
+h2, .h2 {
+	font-size: 30px;
+}
+
+h3, .h3,
+h4, .h4,
+h5, .h5 {
+	font-size: 21px;
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-family: 'Circular-Book';
+}
+
 body {
   	font-family: 'Circular-Book';
   	font-size: 16px;
@@ -308,7 +323,7 @@ button:active {
 * Default Section
 */
 .section {
-	padding: 40px 0;
+	padding: 20px 0;
 	text-align: center;
 }
 
@@ -323,9 +338,6 @@ button:active {
 	padding-top: 80px;
 }
 
-.section .section-title {
-	font-size: 36px;
-}
 
 .section-zero-padding { padding: 0; }
 
@@ -419,7 +431,7 @@ button:active {
 */
 .section-categories { 
 	text-align: center;
-	background: #e6e4da;
+	background: #fafafa;
 	color: #9f9f9f;
 }
 
@@ -475,16 +487,14 @@ button:active {
 /*
 *  Section Two Column - Video & Post a Job
 */
-.section-indulgence {
-	background: #d5d2c9;
-}
+.section-indulgence { }
 .section-indulgence .section-title {
 	margin-bottom: 36px;
 	color: #7a7a78;
 }
 
-.section-two-column .box 	{ 
-
+.section-indulgence  .box 	{ 
+	margin-bottom: 20px;
 }
 
 .section-two-column .box .vertical-parent { 
@@ -581,6 +591,7 @@ button:active {
 	color: #fff;
 	font-size: 18px;
 	text-shadow: none;
+	margin-bottom: 10px;
 }
 
 /* All .box-posts */
@@ -624,10 +635,7 @@ button:active {
 /*
 * Section - Indulgence Giver
 */
-.section-indulgence-giver {
-	background: #e6e4da;
-}
-
+.section-indulgence-giver  { background-color: #fafafa; }
 .section-indulgence-giver .section-title {
 	margin-bottom: 30px;
 	color: #7a7a7a;
@@ -672,9 +680,11 @@ button:active {
 	text-align: left; }
 .section-footer .widget {}
 .section-footer .widget .widget-title {
-	margin-bottom: 15px;
+	margin-bottom: 8px;
 	font-size: 18px;
 	color: #9f9f9f;
+	padding: 10px;
+	cursor: pointer;
 }
 
 .section-footer .widget ul > li > a {
@@ -699,6 +709,75 @@ button:active {
 
 
 
+.section-footer .widget ul li:before {
+    font-family: "FontAwesome";
+    content: "\f0da";
+    background-repeat: no-repeat;
+    background-position: 0px center;
+    padding-right: 10px;
+    color: #59ba4c;
+}
+
+
+
+
+.section-footer .a-style-sm .widget {
+	margin-bottom: 10px;
+	background-color: #efefef;
+}
+
+.section-footer .a-style-sm .widget .widget-title {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.section-footer .a-style-sm .widget li {
+	line-height: inherit;
+	list-style: none;
+}
+
+.section-footer .a-style-sm .widget li:before { 
+	display: none;
+}
+
+.section-footer .a-style-sm .widget  li > a:first-child {
+    border-top: 1px solid #fff;
+}
+
+.section-footer .a-style-sm .widget  li > a {
+    padding: 5px;
+    // margin-bottom: 7px;
+    display: block;
+    margin-left: 0px;
+    text-decoration: none;
+    padding-left: 14px;
+    transition: all .3s;
+}
+
+.section-footer .a-style-sm .widget  li > a:hover,
+.section-footer .a-style-sm .widget  li > a:focus {
+	padding-left: 25px;
+	color: #444;
+}
+
+
+.section-footer .a-style-sm .widget > li > a {}
+.section-footer .a-style-sm .widget ul li:before {
+    position: absolute;
+    top: 15px;
+}
+
+.section-footer .a-style-sm .widget ul li a:before {
+    font-family: "FontAwesome";
+    content: "\f0da";
+    background-repeat: no-repeat;
+    background-position: 0px center;
+    padding-right: 10px;
+    color: #59ba4c;
+}
+
+
+
 /*
 * Section Social
 */
@@ -712,19 +791,20 @@ button:active {
 
 .social-lists {
 	//width: 685px;
-	height: 85px;
 	margin: 0 auto;
 }
 
 .social-lists .iconn {
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;a
 	font-size: 21px;
-	line-height: 40px;
+	line-height: 60px;
 	text-align: center;
 	border-radius: 100%;
 	color: #fff;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 .social-lists .iconn:last-child {
@@ -834,6 +914,9 @@ video {
 
 
 
+.disabled. .hidden {
+	display: none;
+}
 
 /*
 *
@@ -856,6 +939,15 @@ video {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	/* ===== Generic ====== */
+	.section {
+		padding: 40px 0;
+	}
+
+	.section .section-title {
+		font-size: 36px;
+	}
+
 	/* ===== Indulgence ====== */
 	.overlay .content { height: 215px; }
 
@@ -873,6 +965,9 @@ video {
 		margin-right: 10px;
 		font-size: 26px;
 		line-height: 60px;
+	}
+	.section-footer .widget .widget-title {
+		padding-left: 0;
 	}
 }
 
@@ -906,7 +1001,7 @@ video {
 
 	/* ===== Footer Social ====== */
 	.social-lists {
-		width: 685px;
+		width: 480px;	
 		height: 85px;
 		margin: 0 auto;
 	}
@@ -914,11 +1009,11 @@ video {
 	.social-lists .iconn {
 		display: inline-block;
 		float: left;	
-		width: 80px;
-		height: 80px;
+		width: 50px;
+		height: 50px;
 		margin-right: 20px;
-		font-size: 30px;
-		line-height: 80px;
+		font-size: 25px;
+		line-height: 50px;
 		text-align: center;
 		border-radius: 100%;
 		color: #fff;

@@ -49,9 +49,9 @@ function indulgenow_widgets() {
         'id'            => 'footer-widget-1',
         'description'   => __( 'Add widgets here to appear in your Footer column 1.', 'twentyfifteen' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
+        'after_widget'  => '</div></aside>',
         'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'after_title'   => '</h2><div style="display: none;">',
     ) );
 
     register_sidebar( array(
@@ -59,9 +59,9 @@ function indulgenow_widgets() {
         'id'            => 'footer-widget-2',
         'description'   => __( 'Add widgets here to appear in your Footer column 2.', 'twentyfifteen' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
+        'after_widget'  => '</div></aside>',
         'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'after_title'   => '</h2><div style="display: none;">',
     ) );
 
     register_sidebar( array(
@@ -69,9 +69,9 @@ function indulgenow_widgets() {
         'id'            => 'footer-widget-3',
         'description'   => __( 'Add widgets here to appear in your Footer column 3.', 'twentyfifteen' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</aside>',
+        'after_widget'  => '</div></aside>',
         'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'after_title'   => '</h2><div style="display: none;">',
     ) );
 
 }

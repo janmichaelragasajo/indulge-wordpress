@@ -23,6 +23,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+	<div id="top"></div>
 	<div id="navbar-menu-wrapper">
 		<div class="inner-menu-wrapper">
 			<div id="navbarbar" class="navbar-collapse collapse">
