@@ -12,7 +12,7 @@
 	<div class="section-header video-wrapper-control vid-overlay-20">
 		<video class="myHTMLvideo" muted autoplay  poster="<?php echo get_stylesheet_directory_uri(); ?>/img/section-bg-video.jpg" id="bgvid" loop>
 		<!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-		<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/video-s1.mp4" type="video/mp4">
+		<source src="<?php echo get_stylesheet_directory_uri(); ?>/assets/video-1.mp4" type="video/mp4">
 		</video>
 		<div class="container">
 			<div class="row inner">
